@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutiemoori - Cute Things, Creative Ideas</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            pink: '#F472B6',
+                            'pink-light': '#FCE7F3',
+                            blue: '#60A5FA',
+                            'blue-light': '#DBEAFE',
+                            yellow: '#FACC15',
+                            'yellow-light': '#FEF9C3',
+                            dark: '#334155'
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Nunito', sans-serif; }
+    </style>
+</head>
+<body class="text-brand-dark antialiased bg-slate-50 selection:bg-brand-pink selection:text-white overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-white/70 border-b border-brand-pink-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-brand-pink to-brand-blue flex items-center gap-2">
+                        <span>🎀</span> Cutiemoori
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#tentang" class="text-gray-600 hover:text-brand-pink font-semibold transition-colors">Tentang</a>
+                    <a href="#layanan" class="text-gray-600 hover:text-brand-blue font-semibold transition-colors">Layanan & Produk</a>
+                    <a href="#kenapa-kami" class="text-gray-600 hover:text-brand-yellow font-semibold transition-colors">Kenapa Kami</a>
+                </div>
+
+                <!-- Contact Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="#kontak" class="bg-brand-pink text-white px-6 py-2.5 rounded-full font-bold hover:bg-pink-500 hover:shadow-lg hover:shadow-pink-300/50 transition-all transform hover:-translate-y-0.5">
+                        Hubungi Kami
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-pink focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-soft">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
+                <a href="#tentang" class="block px-3 py-3 text-gray-700 font-semibold hover:bg-brand-pink-light rounded-xl">Tentang</a>
+                <a href="#layanan" class="block px-3 py-3 text-gray-700 font-semibold hover:bg-brand-blue-light rounded-xl">Layanan & Produk</a>
+                <a href="#kenapa-kami" class="block px-3 py-3 text-gray-700 font-semibold hover:bg-brand-yellow-light rounded-xl">Kenapa Kami</a>
+                <a href="#kontak" class="block mt-4 bg-brand-pink text-white px-3 py-3 rounded-xl font-bold">Hubungi Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Decorative Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-brand-pink-light via-white to-brand-blue-light -z-10"></div>
+        <div class="absolute top-20 left-10 w-32 h-32 bg-brand-yellow-light rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob"></div>
+        <div class="absolute top-20 right-10 w-32 h-32 bg-brand-pink-light rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-8 left-20 w-32 h-32 bg-brand-blue-light rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-4000"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-800 leading-tight mb-6">
+                Hadirkan Sentuhan Lucu & Kreatif <br class="hidden md:block" /> 
+                untuk <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-pink to-brand-blue">Setiap Kebutuhanmu!</span> ✨
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed font-medium">
+                Dari pernak-pernik handmade yang bisa di-custom, e-book tutorial kreatif, hingga jasa video promosi untuk bisnismu. Semua ide sederhana bisa menjadi lebih berkesan bersama Cutiemoori.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#layanan" class="w-full sm:w-auto bg-brand-yellow text-slate-800 px-8 py-4 rounded-full font-extrabold text-lg shadow-soft hover:shadow-yellow-300/50 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                    🛍️ Belanja Sekarang
+                </a>
+                <a href="https://wa.me/62895323099055" target="_blank" class="w-full sm:w-auto bg-brand-blue text-white px-8 py-4 rounded-full font-extrabold text-lg shadow-soft hover:shadow-blue-300/50 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                    💬 Pesan Custom Desain
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-20 bg-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block mb-4 p-3 bg-brand-pink-light rounded-full">
+                <span class="text-3xl">🧸</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-6">Cute Things. Creative Ideas. Made for You.</h2>
+            <p class="text-lg text-slate-600 leading-relaxed mb-6 font-medium">
+                <strong>Cutiemoori</strong> adalah bisnis kreatif yang menghadirkan berbagai produk lucu, unik, dan bisa dibuat lebih personal sesuai kebutuhanmu. Kami percaya bahwa sesuatu yang sederhana bisa menjadi lebih menarik ketika dibuat dengan ide, kreativitas, dan sentuhan yang tepat.
+            </p>
+            <p class="text-lg text-slate-600 leading-relaxed font-medium">
+                Hadir untuk menggabungkan produk cute, kreativitas, dan teknologi dalam satu tempat. Mulai dari barang kecil untuk menemani keseharian, souvenir untuk momen spesial, produk digital untuk belajar, hingga jasa kreatif untuk membantu mempromosikan bisnis.
+            </p>
+        </div>
+    </section>
+
+    <section id="layanan" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-4">🎀 Apa yang Bisa Kami Buat Untukmu?</h2>
+                <p class="text-lg text-slate-600 font-medium">Temukan berbagai produk dan layanan kreatif yang siap mewujudkan idemu.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: Blue Theme -->
+                <div class="bg-white rounded-[2.5rem] p-8 border-2 border-brand-blue-light hover:border-brand-blue shadow-soft hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-brand-blue-light rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">🎁</div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Produk Cute & Souvenir Fisik</h3>
+                    <p class="text-slate-600 mb-6 font-medium">Temukan berbagai produk lucu yang cocok untuk hadiah, souvenir acara, koleksi pribadi, maupun mempercantik barang-barangmu.</p>
+                    <ul class="space-y-3 text-slate-700 font-semibold">
+                        <li class="flex items-center gap-2"><span class="text-brand-blue">✓</span> Gantungan kunci & HP</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-blue">✓</span> Produk Acrylic</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-blue">✓</span> Souvenir custom</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-blue">✓</span> Desain cute & unik</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Yellow Theme -->
+                <div class="bg-white rounded-[2.5rem] p-8 border-2 border-brand-yellow-light hover:border-brand-yellow shadow-soft hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-brand-yellow-light rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">📚</div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Produk Digital & Edukasi</h3>
+                    <p class="text-slate-600 mb-6 font-medium">Kami menyediakan produk digital yang bisa membantu kamu belajar dan membuat produk kreatifmu sendiri dari rumah.</p>
+                    <ul class="space-y-3 text-slate-700 font-semibold">
+                        <li class="flex items-center gap-2"><span class="text-brand-yellow text-xl">✓</span> E-book tutorial crafting</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-yellow text-xl">✓</span> Panduan mudah dipahami</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-yellow text-xl">✓</span> Ide usaha dari rumah</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-yellow text-xl">✓</span> Kembangkan kreativitas</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Pink Theme -->
+                <div class="bg-white rounded-[2.5rem] p-8 border-2 border-brand-pink-light hover:border-brand-pink shadow-soft hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-brand-pink-light rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">🎬</div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Jasa Video Iklan & Promosi</h3>
+                    <p class="text-slate-600 mb-6 font-medium">Punya produk tapi bingung cara promosinya? Kami bantu produkmu tampil lebih menarik di media sosial.</p>
+                    <ul class="space-y-3 text-slate-700 font-semibold">
+                        <li class="flex items-center gap-2"><span class="text-brand-pink">✓</span> Konten Instagram / TikTok</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-pink">✓</span> Materi promosi WhatsApp</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-pink">✓</span> Video Marketplace</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-pink">✓</span> Spesial untuk UMKM</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-slate-800 mb-16">🌷 Cutiemoori Cocok Untuk Kamu</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="text-center p-6">
+                    <div class="w-24 h-24 mx-auto bg-gradient-to-br from-brand-pink-light to-white rounded-full flex items-center justify-center text-4xl shadow-sm mb-6">🎁</div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Cari hadiah atau souvenir?</h3>
+                    <p class="text-slate-600 font-medium">Temukan berbagai produk cute yang bisa kamu gunakan sendiri atau berikan sebagai kejutan manis kepada orang tersayang.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-24 h-24 mx-auto bg-gradient-to-br from-brand-yellow-light to-white rounded-full flex items-center justify-center text-4xl shadow-sm mb-6">💡</div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Ingin belajar handmade?</h3>
+                    <p class="text-slate-600 font-medium">Coba produk digital kami dan mulai belajar dari langkah sederhana untuk menciptakan karya unikmu sendiri.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-24 h-24 mx-auto bg-gradient-to-br from-brand-blue-light to-white rounded-full flex items-center justify-center text-4xl shadow-sm mb-6">📱</div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Punya bisnis & butuh konten?</h3>
+                    <p class="text-slate-600 font-medium">Gunakan jasa video iklan Cutiemoori untuk membuat produkmu tampil stand-out dan lebih menarik bagi calon pelanggan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kenapa-kami" class="py-20 bg-brand-blue-light/30">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-12">✨ Kenapa Harus Cutiemoori?</h2>
+            
+            <div class="flex flex-col gap-6">
+                <div class="bg-white p-6 rounded-3xl shadow-sm flex flex-col sm:flex-row items-center sm:text-left gap-6 border border-white hover:border-brand-pink transition-colors">
+                    <div class="bg-brand-pink-light w-16 h-16 rounded-full flex items-center justify-center text-2xl shrink-0">🎨</div>
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-800 mb-2">100% Personalisasi</h4>
+                        <p class="text-slate-600 font-medium">Kami mengerti bahwa setiap orang itu unik. Produk kami bisa di-custom sesuai dengan kebutuhan dan selera pribadimu.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-3xl shadow-sm flex flex-col sm:flex-row items-center sm:text-left gap-6 border border-white hover:border-brand-blue transition-colors">
+                    <div class="bg-brand-blue-light w-16 h-16 rounded-full flex items-center justify-center text-2xl shrink-0">🌟</div>
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-800 mb-2">Solusi All-in-One</h4>
+                        <p class="text-slate-600 font-medium">Dari barang fisik, e-book untuk belajar, hingga jasa video konten. Kami memenuhi kebutuhan kreatifmu di satu tempat.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-3xl shadow-sm flex flex-col sm:flex-row items-center sm:text-left gap-6 border border-white hover:border-brand-yellow transition-colors">
+                    <div class="bg-brand-yellow-light w-16 h-16 rounded-full flex items-center justify-center text-2xl shrink-0">💖</div>
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-800 mb-2">Estetika & Kualitas</h4>
+                        <p class="text-slate-600 font-medium">Dibuat dengan penuh cinta dan ketelitian untuk menghasilkan karya yang tidak hanya cantik, tapi juga berkualitas tinggi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontak" class="relative pt-24 pb-10 bg-gradient-to-br from-brand-pink-light via-brand-yellow-light to-white overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-black text-slate-800 mb-6">💖 Mari Berkreasi Bersama</h2>
+            <p class="text-lg md:text-xl text-slate-700 font-medium mb-10 max-w-2xl mx-auto">
+                Punya ide produk atau membutuhkan sesuatu yang custom? Ceritakan idemu kepada kami. Kami akan membantu mewujudkannya menjadi sesuatu yang cute, kreatif, dan sesuai dengan kebutuhanmu.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
+                <a href="https://wa.me/62895323099055" target="_blank" class="w-full sm:w-auto bg-green-500 text-white px-8 py-4 rounded-full font-extrabold text-lg shadow-soft hover:shadow-green-300/50 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                    🚀 Konsultasikan Idemu (WhatsApp)
+                </a>
+                <a href="#" class="w-full sm:w-auto bg-brand-pink text-white px-8 py-4 rounded-full font-extrabold text-lg shadow-soft hover:shadow-pink-300/50 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                    📥 Download E-Book Tutorial
+                </a>
+            </div>
+
+            <div class="pt-8 border-t border-brand-pink/20">
+                <a href="#" class="text-2xl font-black text-slate-800 mb-2 inline-block">🎀 Cutiemoori</a>
+                <p class="text-slate-600 font-bold mb-1">Cute Things. Creative Ideas. Made for You.</p>
+                <p class="text-sm text-slate-500 mt-4">&copy; 2026 Cutiemoori. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const menuLinks = menu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
