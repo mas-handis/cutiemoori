@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutiemoori - Cute Things, Creative Ideas</title>
+    
+    <!-- Google Fonts: Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            pink: '#F472B6',
+                            'pink-light': '#FCE7F3',
+                            blue: '#60A5FA',
+                            'blue-light': '#DBEAFE',
+                            yellow: '#FACC15',
+                            'yellow-light': '#FEF9C3',
+                            dark: '#334155'
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Nunito', sans-serif; }
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f8fafc; }
+        ::-webkit-scrollbar-thumb { background: #F472B6; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ec4899; }
+    </style>
+</head>
+<body class="text-brand-dark antialiased bg-slate-50 selection:bg-brand-pink selection:text-white overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-white/80 border-b border-brand-pink-light shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-brand-pink to-brand-blue flex items-center gap-2">
+                        <span class="text-2xl">🎀</span> Cutiemoori
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#tentang" class="text-slate-600 hover:text-brand-pink font-bold transition-colors">Tentang</a>
+                    <a href="#produk" class="text-slate-600 hover:text-brand-blue font-bold transition-colors">Produk Fisik</a>
+                    <a href="#layanan" class="text-slate-600 hover:text-brand-yellow font-bold transition-colors">Layanan Digital</a>
+                </div>
+
+                <!-- Contact Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="https://wa.me/62895323099055" target="_blank" class="bg-brand-pink text-white px-6 py-2.5 rounded-full font-bold hover:bg-pink-500 hover:shadow-lg hover:shadow-pink-300/50 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                        💬 Hubungi Kami
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brand-pink focus:outline-none p-2 bg-brand-pink-light rounded-lg">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-brand-pink-light absolute w-full shadow-soft">
+            <div class="px-4 pt-4 pb-6 space-y-3 text-center">
+                <a href="#tentang" class="block px-3 py-3 text-slate-700 font-bold hover:bg-brand-pink-light rounded-xl transition-colors">Tentang</a>
+                <a href="#produk" class="block px-3 py-3 text-slate-700 font-bold hover:bg-brand-blue-light rounded-xl transition-colors">Produk Fisik</a>
+                <a href="#layanan" class="block px-3 py-3 text-slate-700 font-bold hover:bg-brand-yellow-light rounded-xl transition-colors">Layanan Digital</a>
+                <a href="https://wa.me/62895323099055" target="_blank" class="block mt-4 bg-brand-pink text-white px-3 py-3 rounded-xl font-bold">💬 Hubungi Kami (WhatsApp)</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-brand-pink-light/60 via-white to-brand-blue-light/60 -z-10"></div>
+        <div class="absolute top-20 left-10 w-48 h-48 bg-brand-yellow-light rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+        <div class="absolute top-20 right-10 w-48 h-48 bg-brand-pink-light rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" style="animation-delay: 2s;"></div>
+        <div class="absolute -bottom-8 left-1/2 w-48 h-48 bg-brand-blue-light rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" style="animation-delay: 4s;"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-brand-pink-light mb-8 text-sm font-bold text-brand-pink">
+                ✨ Selamat datang di Cutiemoori
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-800 leading-tight mb-6">
+                Hadirkan Sentuhan Lucu & Kreatif <br class="hidden md:block" /> 
+                untuk <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-pink to-brand-blue">Setiap Kebutuhanmu!</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed font-semibold">
+                Dari pernak-pernik handmade yang bisa di-custom, e-book tutorial kreatif, hingga jasa video promosi untuk bisnismu. Semua ide sederhana bisa menjadi lebih berkesan.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#produk" class="w-full sm:w-auto bg-brand-yellow text-slate-800 px-8 py-4 rounded-full font-extrabold text-lg shadow-soft hover:shadow-yellow-300/50 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                    🛍️ Lihat Produk Kami
+                </a>
+                <a href="https://wa.me/62895323099055" target="_blank" class="w-full sm:w-auto bg-brand-blue text-white px-8 py-4 rounded-full font-extrabold text-lg shadow-soft hover:shadow-blue-300/50 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                    💬 Pesan Custom Desain
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-20 bg-white relative border-y border-brand-pink-light/50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex mb-6 p-4 bg-gradient-to-br from-brand-pink-light to-white rounded-3xl shadow-sm border border-white">
+                <span class="text-4xl">🧸</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-6">Cute Things. Creative Ideas. Made for You.</h2>
+            <p class="text-lg text-slate-600 leading-relaxed mb-6 font-semibold">
+                <strong>Cutiemoori</strong> adalah bisnis kreatif yang menghadirkan berbagai produk lucu, unik, dan bisa dibuat lebih personal sesuai kebutuhanmu. Kami percaya bahwa sesuatu yang sederhana bisa menjadi lebih menarik ketika dibuat dengan ide, kreativitas, dan sentuhan yang tepat.
+            </p>
+            <p class="text-lg text-slate-600 leading-relaxed font-semibold">
+                Mulai dari barang kecil untuk menemani keseharian, souvenir untuk momen spesial, produk digital untuk belajar, hingga jasa kreatif untuk membantu mempromosikan bisnis. Semuanya dibuat dengan satu tujuan: membuat ide sederhana menjadi sesuatu yang berkesan.
+            </p>
+        </div>
+    </section>
+
+    <section id="produk" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-pink font-bold tracking-wider uppercase text-sm mb-2 block">Katalog Kami</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-4">🎀 Produk Cute & Souvenir</h2>
+                <p class="text-lg text-slate-600 font-semibold">Temukan berbagai produk lucu seperti gantungan kunci, acrylic, dan gantungan HP yang cocok untuk hadiah atau koleksi pribadi.</p>
+            </div>
+
+            <!-- Image Gallery Grid -->
+            <!-- Note: Using onerror to load placeholders in environments where local 'images/' folder isn't accessible -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                <!-- Image 1 -->
+                <div class="relative group overflow-hidden rounded-3xl bg-white p-2 shadow-sm hover:shadow-md transition-shadow aspect-square border border-brand-pink-light/50">
+                    <img src="images/img1.jpg" alt="Produk Cutiemoori 1" onerror="this.src='https://placehold.co/400x400/fbcfe8/333333?text=img1.jpg'" class="w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                </div>
+                <!-- Image 2 -->
+                <div class="relative group overflow-hidden rounded-3xl bg-white p-2 shadow-sm hover:shadow-md transition-shadow aspect-square border border-brand-blue-light/50">
+                    <img src="images/img2.jpg" alt="Produk Cutiemoori 2" onerror="this.src='https://placehold.co/400x400/dbeafe/333333?text=img2.jpg'" class="w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                </div>
+                <!-- Image 3 -->
+                <div class="relative group overflow-hidden rounded-3xl bg-white p-2 shadow-sm hover:shadow-md transition-shadow aspect-square border border-brand-yellow-light/50">
+                    <img src="images/img3.jpg" alt="Produk Cutiemoori 3" onerror="this.src='https://placehold.co/400x400/fef9c3/333333?text=img3.jpg'" class="w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                </div>
+                <!-- Image 4 -->
+                <div class="relative group overflow-hidden rounded-3xl bg-white p-2 shadow-sm hover:shadow-md transition-shadow aspect-square border border-brand-pink-light/50">
+                    <img src="images/img4.jpg" alt="Produk Cutiemoori 4" onerror="this.src='https://placehold.co/400x400/fbcfe8/333333?text=img4.jpg'" class="w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                </div>
+                <!-- Image 5 -->
+                <div class="relative group overflow-hidden rounded-3xl bg-white p-2 shadow-sm hover:shadow-md transition-shadow aspect-square border border-brand-blue-light/50">
+                    <img src="images/img5.jpg" alt="Produk Cutiemoori 5" onerror="this.src='https://placehold.co/400x400/dbeafe/333333?text=img5.jpg'" class="w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                </div>
+                <!-- Image 6 -->
+                <div class="relative group overflow-hidden rounded-3xl bg-white p-2 shadow-sm hover:shadow-md transition-shadow aspect-square border border-brand-yellow-light/50">
+                    <img src="images/img6.jpg" alt="Produk Cutiemoori 6" onerror="this.src='https://placehold.co/400x400/fef9c3/333333?text=img6.jpg'" class="w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                </div>
+                <!-- Image 7 -->
+                <div class="relative group overflow-hidden rounded-3xl bg-white p-2 shadow-sm hover:shadow-md transition-shadow aspect-square border border-brand-pink-light/50">
+                    <img src="images/img7.jpg" alt="Produk Cutiemoori 7" onerror="this.src='https://placehold.co/400x400/fbcfe8/333333?text=img7.jpg'" class="w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                </div>
+                <!-- Image 8 -->
+                <div class="relative group overflow-hidden rounded-3xl bg-white p-2 shadow-sm hover:shadow-md transition-shadow aspect-square border border-brand-blue-light/50">
+                    <img src="images/img8.jpg" alt="Produk Cutiemoori 8" onerror="this.src='https://placehold.co/400x400/dbeafe/333333?text=img8.jpg'" class="w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                </div>
+                <!-- Image 9 -->
+                <div class="relative group overflow-hidden rounded-3xl bg-white p-2 shadow-sm hover:shadow-md transition-shadow aspect-square border border-brand-yellow-light/50">
+                    <img src="images/img9.jpg" alt="Produk Cutiemoori 9" onerror="this.src='https://placehold.co/400x400/fef9c3/333333?text=img9.jpg'" class="w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                </div>
+                <!-- Image 10 -->
+                <div class="relative group overflow-hidden rounded-3xl bg-white p-2 shadow-sm hover:shadow-md transition-shadow aspect-square border border-brand-pink-light/50">
+                    <img src="images/img10.jpg" alt="Produk Cutiemoori 10" onerror="this.src='https://placehold.co/400x400/fbcfe8/333333?text=img10.jpg'" class="w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                </div>
+                <!-- Image 11 -->
+                <div class="relative group overflow-hidden rounded-3xl bg-white p-2 shadow-sm hover:shadow-md transition-shadow aspect-square border border-brand-blue-light/50">
+                    <img src="images/img11.jpg" alt="Produk Cutiemoori 11" onerror="this.src='https://placehold.co/400x400/dbeafe/333333?text=img11.jpg'" class="w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                </div>
+                <!-- Call to action card in grid -->
+                <div class="relative overflow-hidden rounded-3xl bg-brand-pink-light p-6 shadow-sm flex flex-col items-center justify-center text-center aspect-square border border-brand-pink">
+                    <span class="text-4xl mb-3">✨</span>
+                    <h3 class="font-bold text-slate-800 mb-2">Ingin Custom?</h3>
+                    <p class="text-sm text-slate-600 mb-4 font-semibold">Buat produkmu lebih personal.</p>
+                    <a href="https://wa.me/62895323099055" target="_blank" class="bg-brand-pink text-white px-4 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-pink-500 transition-colors">Tanya Admin</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="layanan" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Digital Products -->
+            <div class="flex flex-col md:flex-row items-center gap-10 mb-24">
+                <div class="w-full md:w-1/2 bg-brand-yellow-light/50 rounded-[3rem] p-10 relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-brand-yellow rounded-full mix-blend-multiply opacity-20 blur-2xl"></div>
+                    <div class="text-6xl mb-6">📚</div>
+                    <h3 class="text-3xl font-extrabold text-slate-800 mb-4">Produk Digital & Tutorial</h3>
+                    <p class="text-lg text-slate-600 mb-6 font-semibold">
+                        Cutiemoori menyediakan E-Book Tutorial yang membantumu belajar membuat gantungan kunci sendiri. Cocok untuk mencoba usaha handmade atau mengembangkan kreativitas dari rumah.
+                    </p>
+                    <ul class="space-y-3 text-slate-700 font-bold mb-8">
+                        <li class="flex items-center gap-3"><span class="bg-brand-yellow w-6 h-6 rounded-full flex items-center justify-center text-white text-xs">✓</span> Belajar buat gantungan kunci</li>
+                        <li class="flex items-center gap-3"><span class="bg-brand-yellow w-6 h-6 rounded-full flex items-center justify-center text-white text-xs">✓</span> Ide usaha rumahan</li>
+                        <li class="flex items-center gap-3"><span class="bg-brand-yellow w-6 h-6 rounded-full flex items-center justify-center text-white text-xs">✓</span> Panduan super mudah dipahami</li>
+                    </ul>
+                    <a href="https://wa.me/62895323099055" target="_blank" class="inline-block bg-slate-800 text-white px-6 py-3 rounded-full font-bold hover:bg-slate-700 transition-colors">
+                        Beli E-Book Sekarang
+                    </a>
+                </div>
+                <div class="w-full md:w-1/2 px-4 text-center md:text-left">
+                    <h4 class="text-2xl font-bold text-slate-800 mb-4">💡 Ingin belajar membuat produk handmade?</h4>
+                    <p class="text-slate-600 font-semibold text-lg leading-relaxed">
+                        Tidak perlu bingung harus mulai dari mana. Dengan produk digital kami, kamu bisa mulai belajar dari langkah paling sederhana. Dilengkapi dengan gambar dan instruksi yang jelas!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Video Services -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-10">
+                <div class="w-full md:w-1/2 bg-brand-blue-light/40 rounded-[3rem] p-10 relative overflow-hidden">
+                    <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-brand-blue rounded-full mix-blend-multiply opacity-20 blur-2xl"></div>
+                    <div class="text-6xl mb-6">🎬</div>
+                    <h3 class="text-3xl font-extrabold text-slate-800 mb-4">Jasa Video Iklan UMKM</h3>
+                    <p class="text-lg text-slate-600 mb-6 font-semibold">
+                        Punya produk tapi bingung cara promosinya? Kami membantu membuat video iklan menarik agar produkmu tampil stand-out di media sosial dan marketplace.
+                    </p>
+                    <ul class="space-y-3 text-slate-700 font-bold mb-8">
+                        <li class="flex items-center gap-3"><span class="bg-brand-blue w-6 h-6 rounded-full flex items-center justify-center text-white text-xs">✓</span> Video Instagram Reels & TikTok</li>
+                        <li class="flex items-center gap-3"><span class="bg-brand-blue w-6 h-6 rounded-full flex items-center justify-center text-white text-xs">✓</span> Konten promosi WhatsApp</li>
+                        <li class="flex items-center gap-3"><span class="bg-brand-blue w-6 h-6 rounded-full flex items-center justify-center text-white text-xs">✓</span> Membuat produk lebih mudah dikenali</li>
+                    </ul>
+                    <a href="https://wa.me/62895323099055" target="_blank" class="inline-block bg-brand-blue text-white px-6 py-3 rounded-full font-bold shadow-md hover:bg-blue-500 transition-colors">
+                        Konsultasi Video Promosi
+                    </a>
+                </div>
+                <div class="w-full md:w-1/2 px-4 text-center md:text-left">
+                    <h4 class="text-2xl font-bold text-slate-800 mb-4">📱 Punya bisnis dan butuh konten?</h4>
+                    <p class="text-slate-600 font-semibold text-lg leading-relaxed">
+                        Tinggalkan pusingnya memikirkan konsep visual. Tim kreatif Cutiemoori siap mengubah tampilan produkmu menjadi konten yang segar, lucu, dan tentu saja menarik pelanggan baru!
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="relative pt-24 pb-12 bg-gradient-to-br from-brand-pink-light via-brand-yellow-light/50 to-white overflow-hidden border-t border-brand-pink-light">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-black text-slate-800 mb-6">💖 Mari Berkreasi Bersama</h2>
+            <p class="text-lg md:text-xl text-slate-700 font-bold mb-10 max-w-2xl mx-auto">
+                Punya ide produk atau membutuhkan sesuatu yang custom? Ceritakan idemu kepada kami. Kami akan membantu mewujudkannya!
+            </p>
+            
+            <div class="flex justify-center mb-16">
+                <!-- Main WhatsApp CTA -->
+                <a href="https://wa.me/62895323099055" target="_blank" class="bg-[#25D366] text-white px-10 py-5 rounded-full font-black text-xl shadow-lg hover:shadow-green-400/50 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 w-full sm:w-auto">
+                    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                    </svg>
+                    WhatsApp Kami Sekarang
+                </a>
+            </div>
+
+            <div class="pt-10 border-t border-brand-pink/20">
+                <a href="#" class="text-3xl font-black text-slate-800 mb-2 inline-block">🎀 Cutiemoori</a>
+                <p class="text-slate-600 font-extrabold mb-1">Cute Things. Creative Ideas. Made for You.</p>
+                <p class="text-sm text-slate-500 mt-4 font-bold">&copy; 2026 Cutiemoori. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Logika untuk menampilkan dan menyembunyikan menu di HP
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Tutup menu mobile ketika salah satu link di-klik
+        const menuLinks = menu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
